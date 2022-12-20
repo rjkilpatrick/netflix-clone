@@ -1,0 +1,119 @@
+.home {
+  background-color: #000;
+  color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  text-align: center;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4em;
+  padding: 0 1em;
+}
+
+header img {
+  height: 2em;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  padding: 0 0.5em;
+}
+
+main {
+  padding: 2em 1em;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #e50914;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+/* nav a {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+main {
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+} */
+
+/* Style the navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Style the navigation links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link */
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Make the navigation bar responsive on small screens */
+@media screen and (max-width: 600px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}

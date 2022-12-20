@@ -1,0 +1,21 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set default font and color */
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+/* Set base element styles */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
