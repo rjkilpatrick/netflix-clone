@@ -30,3 +30,7 @@ a {
 footer {
     color: thistle;
 }
+
+:root {
+    --primary-color: #e50914;
+}

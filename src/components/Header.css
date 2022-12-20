@@ -1,0 +1,69 @@
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4em;
+    padding: 1em 1em;
+    width: 100vw;
+    max-width: 900px;
+    background-color: black;
+}
+
+#logo {
+    height: 2em;
+}
+
+.navbar {
+    display: flex;
+    gap: 0.5em;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    padding: 0 0.5em;
+}
+
+.navbar a {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 0.5em;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Make the .navigation bar responsive on small screens */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+/* Make the .navigation bar responsive on small screens */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}

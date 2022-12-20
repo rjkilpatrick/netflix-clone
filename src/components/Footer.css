@@ -1,0 +1,41 @@
+:root {
+    --footer-gutter: 5px;
+}
+
+footer {
+    background-color: black;
+}
+
+.footer-content {
+    width: 90%;
+    margin: 1.5em auto;
+}
+
+.footer-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--footer-gutter);
+    margin: 0;
+    padding: 0;
+}
+
+.footer-item {
+    flex: 1 0 calc(25% - var(--footer-gutter));
+    /* margin: 5px; */
+}
+
+@media screen and (max-width: 700px) {
+    .footer-item {
+        flex: 1 0 calc(100%/3 - var(--footer-gutter));
+        /* margin: 5px; */
+    }
+}
+
+.footer-content a {
+    color: inherit;
+}
+
+.footer-content a:hover,
+.footer-content a:active {
+    text-decoration: underline;
+}

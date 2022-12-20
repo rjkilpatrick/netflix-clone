@@ -1,28 +1,7 @@
 import React from "react";
 import "./App.css";
-
-const Header = () => {
-  return (
-    <header>
-      <img id="logo" src="/assets/logo.png" alt="Netflix" width="300px" height="150px" />
-      <nav className="navbar">
-        <a href="#home" class="active">
-          Home
-        </a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-  );
-};
-
-const Footer = () => {
-  return (
-    <footer>
-      <p>Footer</p>
-    </footer>
-  );
-};
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
 
 const App = () => {
   return (
@@ -36,9 +15,21 @@ const App = () => {
           <a href="#sign-up">
             <button>Sign Up Free</button>
           </a>
-          <video id="background-video" autoPlay loop muted>
-            <source src="C:\Users\rjk217\OneDrive - University of Exeter\Videos\2022-12-02 15-13-37.mkv"/>
+          <video
+            id="background-video"
+            autoPlay
+            loop
+            muted
+            poster="//assets.codepen.io/6093409/river.jpg"
+          >
+            <source
+              src="//assets.codepen.io/6093409/river.mp4"
+              type="video/mp4"
+            />
           </video>
+        </div>
+        <div className="card">
+          <p></p>
         </div>
       </main>
       <Footer />

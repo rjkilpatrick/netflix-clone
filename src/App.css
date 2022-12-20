@@ -1,5 +1,5 @@
 .home {
-  background-color: #000;
+  /* background-color: #000; */
   color: #fff;
   font-family: "Inter", sans-serif;
   min-height: 100vh;
@@ -7,102 +7,6 @@
   flex-direction: column;
   align-items: center;
   flex: 0 0 0;
-}
-
-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 4em;
-  padding: 1em 1em;
-  width: 100vw;
-  max-width: 900px;
-}
-
-#logo {
-  height: 2em;
-}
-
-.navbar {
-  display: flex;
-  gap: 0.5em;
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar ul li {
-  padding: 0 0.5em;
-}
-
-main {
-  padding: 2em 1em;
-}
-
-h1 {
-  font-size: 1.5em;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  background-color: #e50914;
-  border: 0;
-  border-radius: 2px;
-  color: #fff;
-  padding: 0.5em 1em;
-  cursor: pointer;
-}
-
-.navbar a {
-  position: relative;
-  display: inline-block;
-  color: #fff;
-  padding: 0.5em;
-}
-
-.navbar a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: #fff;
-  transition: 0.3s ease-in-out;
-}
-
-.navbar a:hover::before {
-  width: 100%;
-}
-
-main {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  justify-content: center;
-}
-
-/* Make the .navbarigation bar responsive on small screens */
-@media screen and (max-width: 600px) {
-  .navbarbar a {
-    float: none;
-    display: block;
-  }
-}
-
-/* Make the .navbarigation bar responsive on small screens */
-@media screen and (max-width: 600px) {
-  .navbarbar a {
-    float: none;
-    display: block;
-  }
 }
 
 /* Background video section */
@@ -129,4 +33,33 @@ main {
   align-items: center;
   min-height: 80vh;
   justify-content: center;
+}
+
+main {
+  padding: 2em 1em;
+}
+
+main {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  width: 100vw;
+  max-width: 900px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #e50914;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0.5em 1em;
+  cursor: pointer;
 }
