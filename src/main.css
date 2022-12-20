@@ -27,10 +27,12 @@ a {
     text-decoration: none;
 }
 
-footer {
-    color: thistle;
-}
-
 :root {
     --primary-color: #e50914;
+}
+
+.clip {
+    width: 90%;
+    margin: 1.5em auto;
+    max-width: 900px;
 }

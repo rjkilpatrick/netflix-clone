@@ -3,12 +3,9 @@
 }
 
 footer {
-    background-color: black;
-}
-
-.footer-content {
-    width: 90%;
-    margin: 1.5em auto;
+    background-color: #000;
+    color: hsla(0, 0%, 72%, 0.933);
+    width: 100%;
 }
 
 .footer-items {
@@ -21,13 +18,11 @@ footer {
 
 .footer-item {
     flex: 1 0 calc(25% - var(--footer-gutter));
-    /* margin: 5px; */
 }
 
 @media screen and (max-width: 700px) {
     .footer-item {
         flex: 1 0 calc(100%/3 - var(--footer-gutter));
-        /* margin: 5px; */
     }
 }
 

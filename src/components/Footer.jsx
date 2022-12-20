@@ -23,7 +23,7 @@ const FooterItem = ({ text }) => {
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-content">
+      <div className="footer-content clip">
         <p>
           Questions? Call <a href="tel:+1(421) 264-4932">+1 (421) 264-4932</a>
         </p>
