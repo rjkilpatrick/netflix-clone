@@ -42,12 +42,11 @@
 }
 
 .card-content {
-  padding: 75px 0;
+  max-width: 900px;
 }
 
 #sign-up {
   display: flex;
-  gap: 1em;
   flex-direction: column;
   align-items: center;
   background-color: transparent;
@@ -58,15 +57,8 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1em;
   justify-content: center;
   width: 100%;
-}
-
-h1 {
-  font-size: 1.5em;
-  margin: 0;
-  padding: 0;
 }
 
 button {
@@ -81,12 +73,27 @@ button {
 .half-plane {
   display: flex;
   flex-direction: row;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
+
+.half-plane-swap {
+  flex-direction: row-reverse;
+}
+
 
 .half-plane-left {
   order: 0;
-  width: 50%;
-  height: fit-content;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 949px) {
+  .half-plane {
+    flex-direction: column;
+  }
 }
 
 .half-plane-right {
@@ -99,6 +106,10 @@ button {
   text-align: center;
 }
 
+.hero-card .card-content {
+  padding: 75px 0;
+}
+
 .hero-card h1 {
   margin: 0 auto;
   max-width: 640px;
@@ -107,6 +118,10 @@ button {
 .card {
   background: black;
   border-top: 8px solid #222;
+}
+
+.card-content {
+  margin: 0 auto;
 }
 
 .card-title {
@@ -147,4 +162,42 @@ button {
   border-bottom-left-radius: 0;
   border-left: 1px solid #333;
   border-top-left-radius: 0;
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.25rem;
+}
+
+.question-list details {
+  background-color: #303030;
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+}
+
+.question-list details[open] summary {
+  margin-bottom: 0.8em;
+  border-bottom: 1px solid #aaa;
+}
+
+.question-list details summary::-webkit-details-marker,
+.question-list details summary::marker {
+  display: none;
+  content: "";
+}
+
+summary {
+  position: relative;
+}
+
+summary::after {
+  position: absolute;
+  right: 0;
+  content: '+';
+}
+
+details[open] summary:after {
+  content: "×";
 }

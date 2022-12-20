@@ -60,3 +60,17 @@ input[type=email] {
     font-size: 16px;
     padding: 10px 10px 0;
 }
+
+img {
+    border: 0;
+    height: auto;
+    max-width: 100%;
+}
+
+details summary {
+    cursor: pointer;
+}
+
+details summary > * {
+    display: inline;
+}
