@@ -1,5 +1,6 @@
 header {
-    width: 100%; /* Don't use 100vw, <https://github.com/w3c/csswg-drafts/issues/6026> */
+    width: 100%;
+    /* Don't use 100vw, <https://github.com/w3c/csswg-drafts/issues/6026> */
     background-color: black;
 }
 
@@ -10,8 +11,14 @@ header {
     justify-content: space-between;
 }
 
-#logo {
+#netflix-logo {
     height: 2em;
+    fill: var(--primary-color);
+}
+
+.svg-icon-netflix-logo {
+    height: 36px;
+    width: 134px;
 }
 
 .navbar {
@@ -44,7 +51,7 @@ header {
     left: 0;
     width: 0;
     height: 1px;
-    background: #fff;
+    background: var(--primary-color);
     transition: 0.3s ease-in-out;
 }
 
