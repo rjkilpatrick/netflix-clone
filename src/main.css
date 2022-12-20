@@ -1,8 +1,15 @@
 /* Reset default styles */
-* {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
 }
 
 /* Set default font and color */
@@ -18,4 +25,8 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+footer {
+    color: thistle;
 }

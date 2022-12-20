@@ -1,9 +1,12 @@
 .home {
   background-color: #000;
   color: #fff;
-  font-family: "Helvetica Neue", sans-serif;
-  text-align: center;
+  font-family: "Inter", sans-serif;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 0;
 }
 
 header {
@@ -12,25 +15,28 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 4em;
-  padding: 0 1em;
+  padding: 1em 1em;
+  width: 100vw;
+  max-width: 900px;
 }
 
-header img {
+#logo {
   height: 2em;
 }
 
-header nav {
+.navbar {
   display: flex;
+  gap: 0.5em;
 }
 
-header nav ul {
+.navbar ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-header nav ul li {
+.navbar ul li {
   padding: 0 0.5em;
 }
 
@@ -53,13 +59,14 @@ button {
   cursor: pointer;
 }
 
-/* nav a {
+.navbar a {
   position: relative;
   display: inline-block;
   color: #fff;
+  padding: 0.5em;
 }
 
-nav a::before {
+.navbar a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -70,50 +77,56 @@ nav a::before {
   transition: 0.3s ease-in-out;
 }
 
-nav a:hover::before {
+.navbar a:hover::before {
   width: 100%;
 }
 
 main {
-  padding: 2em 1em;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1em;
   justify-content: center;
-} */
-
-/* Style the navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
 }
 
-/* Style the navigation links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Style the navigation links on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the active link */
-.navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-/* Make the navigation bar responsive on small screens */
+/* Make the .navbarigation bar responsive on small screens */
 @media screen and (max-width: 600px) {
-  .navbar a {
+  .navbarbar a {
     float: none;
     display: block;
   }
+}
+
+/* Make the .navbarigation bar responsive on small screens */
+@media screen and (max-width: 600px) {
+  .navbarbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/* Background video section */
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.card {
+  padding: 1em 2em;
+}
+
+#sign-up {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  justify-content: center;
 }
