@@ -25,8 +25,7 @@ const Logo = () => {
       <span>
         <svg
           viewBox="0 0 111 30"
-          data-uia="netflix-logo"
-          class="svg-icon svg-icon-netflix-logo"
+          className="svg-icon svg-icon-netflix-logo"
           aria-hidden="true"
           focusable="false"
         >

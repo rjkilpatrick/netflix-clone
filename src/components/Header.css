@@ -2,6 +2,7 @@ header {
     width: 100%;
     /* Don't use 100vw, <https://github.com/w3c/csswg-drafts/issues/6026> */
     background-color: black;
+    padding: 1.5em 0;
 }
 
 .header {

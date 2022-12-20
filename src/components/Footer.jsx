@@ -2,16 +2,6 @@ import React from "react";
 
 import "./Footer.css";
 
-function SocialButton({ href, ...props }) {
-  return (
-    <>
-      <a href={href}>
-        <img width="40px" height="40px" {...props} />
-      </a>
-    </>
-  );
-}
-
 const FooterItem = ({ text }) => {
   return (
     <li className="footer-item">
@@ -24,7 +14,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-content clip">
-        <p>
+        <p className="footer-prominent">
           Questions? Call <a href="tel:+1(421) 264-4932">+1 (421) 264-4932</a>
         </p>
         

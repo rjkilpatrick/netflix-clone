@@ -33,7 +33,7 @@ a {
 
 .clip {
     width: 90%;
-    margin: 1.5em auto;
+    margin: 0 auto;
     max-width: 900px;
 }
 
@@ -48,4 +48,15 @@ a {
     position: absolute;
     width: 1px;
     word-wrap: normal !important;
+}
+
+input[type=email] {
+    appearance: none;
+    border: 1px solid #8c8c8c;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #000;
+    display: block;
+    font-size: 16px;
+    padding: 10px 10px 0;
 }

@@ -4,8 +4,17 @@
 
 footer {
     background-color: #000;
-    color: hsla(0, 0%, 72%, 0.933);
+    color: #737373;
     width: 100%;
+    border-top: 8px solid #222;
+}
+
+.footer-content {
+    font-size: 0.8rem;
+    padding: 70px 45px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .footer-items {
@@ -18,12 +27,18 @@ footer {
 
 .footer-item {
     flex: 1 0 calc(25% - var(--footer-gutter));
+    margin-bottom: 1em;
 }
 
 @media screen and (max-width: 700px) {
     .footer-item {
         flex: 1 0 calc(100%/3 - var(--footer-gutter));
     }
+}
+
+.footer-prominent {
+    font-size: 1rem;
+    /* margin: 0 0 2rem; */
 }
 
 .footer-content a {

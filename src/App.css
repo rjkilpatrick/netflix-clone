@@ -9,6 +9,10 @@
   flex: 0 0 0;
 }
 
+.home>*:last-of-type {
+  margin-top: auto;
+}
+
 /* Background video section */
 #background-video {
   width: 100%;
@@ -22,8 +26,23 @@
   z-index: -1;
 }
 
+#background-video::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+  z-index: 1;
+}
+
 .card {
-  padding: 1em 2em;
+  padding: 45px 70px;
+}
+
+.card-content {
+  padding: 75px 0;
 }
 
 #sign-up {
@@ -31,12 +50,8 @@
   gap: 1em;
   flex-direction: column;
   align-items: center;
-  min-height: 80vh;
+  background-color: transparent;
   justify-content: center;
-}
-
-main {
-  padding: 2em 1em;
 }
 
 main {
@@ -45,8 +60,7 @@ main {
   flex-direction: column;
   gap: 1em;
   justify-content: center;
-  width: 100vw;
-  max-width: 900px;
+  width: 100%;
 }
 
 h1 {
@@ -62,4 +76,75 @@ button {
   color: #fff;
   padding: 0.5em 1em;
   cursor: pointer;
+}
+
+.half-plane {
+  display: flex;
+  flex-direction: row;
+}
+
+.half-plane-left {
+  order: 0;
+  width: 50%;
+  height: fit-content;
+}
+
+.half-plane-right {
+  order: 1;
+  width: 50%;
+  height: fit-content;
+}
+
+.hero-card {
+  text-align: center;
+}
+
+.hero-card h1 {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.card {
+  background: black;
+  border-top: 8px solid #222;
+}
+
+.card-title {
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle,
+.card-subsubtitle {
+  font-weight: 400;
+}
+
+.email-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+#hero-email-text {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  height: 60px;
+  min-width: 450px;
+}
+
+#hero-email-label {
+  position: absolute;
+  left: 10px;
+  color: #444;
+  left: 10px;
+  top: 6px;
+  font-size: calc(1rem *2/3);
+}
+
+#hero-email-submit {
+  flex: 1 1 auto;
+  border-bottom-left-radius: 0;
+  border-left: 1px solid #333;
+  border-top-left-radius: 0;
 }
