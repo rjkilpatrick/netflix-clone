@@ -3,10 +3,10 @@ import "./App.css";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 
-const Card = (props) => {
+const Card = ({ className, children, ...props }) => {
   return (
-    <div className={"card" + (props.className || "")} {...props}>
-      {props.children}
+    <div className={"card " + (className || "")} {...props}>
+      {children}
     </div>
   );
 };
@@ -68,80 +68,62 @@ const HeroCard = () => {
   );
 };
 
-const Card1 = () => {
+const HalfPaneCard = ({ title, subtitle, imgSrc, ...props }) => {
   return (
-    <Card>
+    <Card {...props}>
       <div className="card-content half-plane">
         <HalfPane>
-          <h1 className="card-title">Enjoy on your TV.</h1>
-          <h2 className="card-subtitle">
-            Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
-            players and more.
-          </h2>
+          <h1 className="card-title">{title}</h1>
+          <h2 className="card-subtitle">{subtitle}</h2>
         </HalfPane>
         <HalfPane>
-          <img src="//assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" />
+          <img src={imgSrc} />
         </HalfPane>
       </div>
     </Card>
+  );
+};
+
+const Card1 = () => {
+  return (
+    <HalfPaneCard
+      title="Enjoy on your TV."
+      subtitle="Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+            players and more"
+      imgSrc="//assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+    />
   );
 };
 
 const Card2 = () => {
   return (
-    <Card>
-      <div className="card-content half-plane half-plane-swap">
-        <HalfPane>
-          <h1 className="card-title">Watch everywhere.</h1>
-          <h2 className="card-subtitle">
-            Stream unlimited films and TV programmes on your phone, tablet,
-            laptop and TV without paying more.
-          </h2>
-        </HalfPane>
-        <HalfPane>
-          <img src="//assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" />
-        </HalfPane>
-      </div>
-    </Card>
+    <HalfPaneCard
+      title="Watch everywhere."
+      subtitle="Stream unlimited films and TV programmes on your phone, tablet,
+      laptop and TV without paying more."
+      imgSrc="//assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+    />
   );
 };
 
 const Card3 = () => {
   return (
-    <Card>
-      <div className="card-content half-plane">
-        <HalfPane>
-          <h1 className="card-title">Create profiles for children.</h1>
-          <h2 className="card-subtitle">
-            Send children on adventures with their favourite characters in a
-            space made just for them – free with your membership.
-          </h2>
-        </HalfPane>
-        <HalfPane>
-          <img src="//occ-0-5136-299.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420" />
-        </HalfPane>
-      </div>
-    </Card>
+    <HalfPaneCard
+      title="Create profiles for children."
+      subtitle="Send children on adventures with their favourite characters in a
+      space made just for them &#8722; free with your membership."
+      imgSrc="//occ-0-5136-299.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420"
+    />
   );
 };
 
 const Card4 = () => {
   return (
-    <Card>
-      <div className="card-content half-plane half-plane-swap">
-        <HalfPane>
-          <h1 className="card-title">
-            Download your programmes to watch offline.
-          </h1>
-          <h2 className="card-subtitle">
-            Available on all plans except Basic with adverts.
-          </h2>
-        </HalfPane>
-        <HalfPane>
-          <img src="//assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" />
-        </HalfPane>
-      </div>
-    </Card>
+    <HalfPaneCard
+      title="Download your programmes to watch offline."
+      subtitle="Available on all plans except Basic with adverts."
+      imgSrc="//assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+    />
   );
 };
 
@@ -204,7 +186,7 @@ const FAQs = () => {
             <br />
             Children's profiles come with PIN-protected parental controls that
             let you restrict the maturity rating of content children can watch
-            and block specific titles you don’t want children to see.
+            and block specific titles you don't want children to see.
           </details>
         </div>
       </div>
